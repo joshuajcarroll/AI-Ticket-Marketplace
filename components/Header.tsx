@@ -2,7 +2,7 @@ import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/images/logo.png";
-//import SearchBar from "./SearchBar";
+import SearchBar from "./SearchBar";
 
 function Header() {
   return (
@@ -35,7 +35,7 @@ function Header() {
 
         {/* Search Bar - Full width on mobile */}
         <div className="w-full lg:max-w-2xl">
-          {/*<SearchBar />*/}
+          <SearchBar />
         </div>
 
         <div className="hidden lg:block ml-auto">
