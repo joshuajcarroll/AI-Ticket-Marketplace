@@ -16,7 +16,7 @@ export default function SyncUserWithConvex() {
       try {
         await updateUser({
           userId: user.id,
-          name: `${user.firstName ?? ""} ${user.lastName ?? ""}`.trim(),
+          name: `${user.firstName ?? ""} ${user.lastName ?? ""}`.trim(), //user.fullName
           email: user.emailAddresses[0]?.emailAddress ?? "",
         });
       } catch (error) {
