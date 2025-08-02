@@ -1,5 +1,3 @@
-"use client";
-
 import { Search } from "lucide-react";
 import Form from "next/form";
 
