@@ -3,7 +3,7 @@
 import { api } from "@/convex/_generated/api";
 import { useQuery } from "convex/react";
 //import EventCard from "./EventCard";
-//import Spinner from "./Spinner";
+import Spinner from "./Spinner";
 import { CalendarDays, Ticket } from "lucide-react";
 
 export default function EventList() {
@@ -12,7 +12,7 @@ export default function EventList() {
   if (!events) {
     return (
       <div className="min-h-[400px] flex items-center justify-center">
-        {/*<Spinner />*/}
+        <Spinner />
       </div>
     );
   }
