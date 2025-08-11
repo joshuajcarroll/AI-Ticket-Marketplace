@@ -1,11 +1,11 @@
 import { query, mutation } from "./_generated/server";
 import { ConvexError, v } from "convex/values";
-import { DURATIONS, WAITING_LIST_STATUS, TICKET_STATUS } from "./constants";
-import { components, internal } from "./_generated/api";
-import { processQueue } from "./waitingList";
-import { MINUTE, RateLimiter } from "@convex-dev/rate-limiter";
+//import { DURATIONS, WAITING_LIST_STATUS, TICKET_STATUS } from "./constants";
+//import { components, internal } from "./_generated/api";
+//import { processQueue } from "./waitingList";
+//import { MINUTE, RateLimiter } from "@convex-dev/rate-limiter";
 
-export type Metrics = {
+/*export type Metrics = {
   soldTickets: number;
   refundedTickets: number;
   cancelledTickets: number;
@@ -19,7 +19,7 @@ const rateLimiter = new RateLimiter(components.rateLimiter, {
     rate: 3, // 3 joins allowed
     period: 30 * MINUTE, // in 30 minutes
   },
-});
+});*/
 
 export const get = query({
   args: {},
@@ -31,7 +31,7 @@ export const get = query({
   },
 });
 
-export const getById = query({
+/*export const getById = query({
   args: { eventId: v.id("events") },
   handler: async (ctx, { eventId }) => {
     return await ctx.db.get(eventId);
@@ -499,4 +499,4 @@ export const cancelEvent = mutation({
 
     return { success: true };
   },
-});
+});*/
