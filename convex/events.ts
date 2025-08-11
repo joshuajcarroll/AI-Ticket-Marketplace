@@ -2,10 +2,10 @@ import { query, mutation } from "./_generated/server";
 import { ConvexError, v } from "convex/values";
 import { DURATIONS, WAITING_LIST_STATUS, TICKET_STATUS } from "./constants";
 //import { components, internal } from "./_generated/api";
-//import { processQueue } from "./waitingList";
-//import { MINUTE, RateLimiter } from "@convex-dev/rate-limiter";
+import { processQueue } from "./waitingList";
+import { MINUTE, RateLimiter } from "@convex-dev/rate-limiter";
 
-/*export type Metrics = {
+export type Metrics = {
   soldTickets: number;
   refundedTickets: number;
   cancelledTickets: number;
@@ -13,7 +13,7 @@ import { DURATIONS, WAITING_LIST_STATUS, TICKET_STATUS } from "./constants";
 };
 
 // Initialize rate limiter
-const rateLimiter = new RateLimiter(components.rateLimiter, {
+/*const rateLimiter = new RateLimiter(components.rateLimiter, {
   queueJoin: {
     kind: "fixed window",
     rate: 3, // 3 joins allowed
@@ -317,7 +317,7 @@ export const getUserWaitingList = query({
 
     return entriesWithEvents;
   },
-});
+});*/
 
 export const getEventAvailability = query({
   args: { eventId: v.id("events") },
@@ -499,4 +499,4 @@ export const cancelEvent = mutation({
 
     return { success: true };
   },
-});*/
+});
