@@ -1,6 +1,6 @@
 import { query, mutation } from "./_generated/server";
 import { ConvexError, v } from "convex/values";
-//import { DURATIONS, WAITING_LIST_STATUS, TICKET_STATUS } from "./constants";
+import { DURATIONS, WAITING_LIST_STATUS, TICKET_STATUS } from "./constants";
 //import { components, internal } from "./_generated/api";
 //import { processQueue } from "./waitingList";
 //import { MINUTE, RateLimiter } from "@convex-dev/rate-limiter";
@@ -31,14 +31,14 @@ export const get = query({
   },
 });
 
-/*export const getById = query({
+export const getById = query({
   args: { eventId: v.id("events") },
   handler: async (ctx, { eventId }) => {
     return await ctx.db.get(eventId);
   },
 });
 
-export const create = mutation({
+/*export const create = mutation({
   args: {
     name: v.string(),
     description: v.string(),
@@ -60,7 +60,7 @@ export const create = mutation({
     });
     return eventId;
   },
-});
+});*/
 
 // Helper function to check ticket availability for an event
 export const checkAvailability = query({
@@ -108,7 +108,7 @@ export const checkAvailability = query({
 });
 
 // Join waiting list for an event
-export const joinWaitingList = mutation({
+/*export const joinWaitingList = mutation({
   // Function takes an event ID and user ID as arguments
   args: { eventId: v.id("events"), userId: v.string() },
   handler: async (ctx, { eventId, userId }) => {
