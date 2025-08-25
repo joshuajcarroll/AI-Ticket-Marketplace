@@ -19,7 +19,14 @@ function EventPage() {
         </div>
     }
   return (
-    <div>Event Page</div>
+    <div className="min-h-screen bg-gray-50">
+        {/*Event Details Section */}
+        <div className="max-w-7xl mx-auto p-4 sm:px-6 lg:px-8 py-12">
+            <div className="bg-white rounded-xl shadow-sm overflow-hidden"></div>
+        </div>
+    </div>
+    
+
   )
 }
 
