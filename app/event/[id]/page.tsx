@@ -39,7 +39,12 @@ function EventPage() {
                 {/*Event Details in depth */}
                 <div className="p-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                        
+                        <div className="space-y-8">
+                            <div>
+                                <h1 className="text-4xl font-bold text-gray-900">{event.name}</h1>
+                                <p className="text-lg text-gray-600">{event.description}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
